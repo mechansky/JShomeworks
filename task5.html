@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	/*Реализовать четыре основные арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.*/
+
+	var a = 15;
+	var b = 0;
+
+	function summ(number1, number2) {
+		var result = number1 + number2;
+		return result.toFixed(2)
+	}
+
+	function diff(number1, number2) {
+		var result = number1 - number2;
+		return result.toFixed(2)
+	}
+
+	function multiplication(number1, number2) {
+		var result = number1 * number2;
+		return result.toFixed(2)
+	}
+
+	function division(number1, number2) {
+		if (number2 == 0) 
+			alert('на ноль делить нельзя!');
+		else
+			var result = number1 / number2;
+			return result.toFixed(2)
+	}
+
+	alert(a + ' + ' + b + ' = ' + summ(a, b));
+	alert(a + ' - ' + b + ' = ' + diff(a, b));
+	alert(a + ' * ' + b + ' = ' + multiplication(a, b));
+	alert(a + ' / ' + b + ' = ' + division(a, b));
+
+</script>

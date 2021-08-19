@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	/*Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 — значения аргументов, operation — строка с названием операции. В зависимости от переданного значения выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (применить switch)*/
+
+	function mathOperation(arg1, arg2, operation) {
+		switch(operation){
+		case 'summ':
+			alert(arg1 + ' + ' + arg2 + ' = ' + (arg1 + arg2).toFixed(2));
+			break;
+		case 'diff':
+			alert(arg1 + ' - ' + arg2 + ' = ' + (arg1 - arg2).toFixed(2));
+			break;
+		case 'multiplication':
+			alert(arg1 + ' * ' + arg2 + ' = ' + (arg1 * arg2).toFixed(2));
+			break;
+		case 'division':
+			if (arg2 == 0)
+				alert('на ноль делить нельзя!')
+			else
+				alert(arg1 + ' / ' + arg2 + ' = ' + (arg1 / arg2).toFixed(2));
+				break;
+		}
+	}
+		
+	mathOperation(15, 10, 'summ');
+	mathOperation(15, 10, 'diff');
+	mathOperation(15, 10, 'multiplication');
+	mathOperation(15, 0, 'division');
+
+</script>

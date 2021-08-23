@@ -1,0 +1,26 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	/*С помощью цикла while вывести все простые числа в промежутке от 0 до 100.*/
+
+	
+
+	var simple_numbers = []
+
+	for (let x = 0, count = 0; x <= 100; x++) {
+		for (let i = 0; i <= x; i++) {
+			if (x % i == 0) {
+				count++;
+			}
+		}
+		if (count == 2) 
+			simple_numbers.push(x)
+		else
+			count = 0;
+	}
+		
+		
+
+	alert(simple_numbers)
+	
+</script>

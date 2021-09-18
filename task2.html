@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        h1 {
+            text-align: center;
+        }
+
+        .images {
+            display: none;
+            text-align: center;
+        }
+
+        .displayedImage {
+            text-align: center;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 35px;
+        }
+
+        .buttons {
+            text-align: center;
+            justify-content: space-around;
+
+        }
+    </style>
+
+
+    <h1>Задание 2</h1>
+    <div class="gallery">
+        <div class="displayedImage">
+            <img src="images/p1.jpg">
+        </div>
+        <img class="images" src="images/p1.jpg">
+        <img class="images" src="images/p2.jpg">
+        <img class="images" src="images/p3.jpg">
+        <img class="images" src="images/p4.jpg">
+        <img class="images" src="images/p5.jpg">
+
+        <div class="buttons">
+            <button id="leftButton">left</button>
+            <button id="rightButton">right</button>
+
+
+        </div>
+
+        <script>
+            var images = document.querySelectorAll("img");
+            var leftButton = document.querySelector('#leftButton');
+            var rightButton = document.querySelector('#rightButton');
+            var displayedImage = document.querySelector('.displayedImage');
+            var imagesArray = [];
+            for (var i = 1; i < images.length; i++) {
+                imagesArray.push(images[i]);
+            };
+
+            var i = 1;
+
+            rightButton.onclick = function () {
+                if (i == imagesArray.length) {
+                    i = 1;
+                    displayedImage.innerHTML = '<img src="images/p' + (i) + '.jpg"></img>';
+                } else {
+                    i = i + 1;
+                    displayedImage.innerHTML = '<img src="images/p' + (i) + '.jpg"></img>';
+                }
+            }
+
+            leftButton.onclick = function () {
+                i = i - 1;
+                if (i == 0) {
+                    i = imagesArray.length;
+                    displayedImage.innerHTML = '<img src="images/p' + (i) + '.jpg"></img>';
+                } else {
+                    displayedImage.innerHTML = '<img src="images/p' + (i) + '.jpg"></img>';
+                }
+
+            }
+
+
+        </script>
+
+
+</body>
+
+</html>
